@@ -17,30 +17,11 @@ function MyApp({ Component, pageProps }: any) {
         <h1 className='title'>
           <Link href={'/'}>MOVIE LIST</Link>
         </h1>
-        <div
-          style={{
-            display: 'flex',
-            // alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            minHeight: '100vh',
-            background: 'rgba(0,0,0,0.045)',
-          }}
-        >
+        <div className='full-container'>
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <div
-              style={{
-                display: 'flex',
-                minHeight: '100vh',
-                width: '100vw',
-                maxWidth: '1400px',
-                padding: '16px',
-                alignItems: 'flex-start',
-                justifyContent: 'center',
-              }}
-            >
+            <div className='component-container'>
               <Component {...pageProps} />
             </div>
           )}

@@ -28,7 +28,27 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: dimgrey;
+  color: #1677ff;
+  background-color: #fff;
+}
+
+.full-container {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.045);
+  height: calc(100% - 64px);
+}
+
+.component-container {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  max-width: 1400px;
+  padding: 16px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .sm-text {
