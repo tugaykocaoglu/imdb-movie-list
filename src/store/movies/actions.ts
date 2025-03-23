@@ -12,7 +12,7 @@ export const getMoviesBySearch = createAsyncThunk(
     type?: 'movie' | 'series' | 'episode' | 'all';
   }) => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com`, {
+      const response = await axios.get(`https://www.omdbapi.com`, {
         params: {
           apiKey: `${process.env.NEXT_PUBLIC_OMDB_API_KEY}`,
           s: data?.s || undefined,
@@ -32,7 +32,7 @@ export const getMovieDetail = createAsyncThunk(
   ActionTypes.GET_MOVIE_DETAIL,
   async (data: { t?: string; i?: string }) => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com`, {
+      const response = await axios.get(`https://www.omdbapi.com`, {
         params: {
           apiKey: `${process.env.NEXT_PUBLIC_OMDB_API_KEY}`,
           i: data?.i,
