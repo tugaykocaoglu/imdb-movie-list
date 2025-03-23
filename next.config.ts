@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  transpilePackages: ['rc-util', 'rc-picker'],
 };
 
 export default nextConfig;

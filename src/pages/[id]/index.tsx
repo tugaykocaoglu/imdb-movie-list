@@ -1,5 +1,5 @@
 import React from 'react';
 
-import MovieDetail from './[id].page';
+import MovieDetail from './MovieDetail';
 
 export default React.memo(MovieDetail);

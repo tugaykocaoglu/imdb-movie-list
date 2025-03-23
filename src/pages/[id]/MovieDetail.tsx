@@ -4,7 +4,7 @@ import { Col, Rate, Row, Spin, Tag } from 'antd';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import styles from './[id].module.scss';
+import styles from './MovieDetail.module.scss';
 
 const MovieDetail = () => {
   const [loading, setLoading] = useState(true);

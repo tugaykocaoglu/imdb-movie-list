@@ -1,12 +1,13 @@
-import { useRouter } from 'next/router';
-import '../styles/globals.scss';
-import { useState } from 'react';
+'use client';
 
+import '../styles/globals.scss';
+
+import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 import Link from 'next/link';
 
-function MyApp({ Component, pageProps }: any) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <>
