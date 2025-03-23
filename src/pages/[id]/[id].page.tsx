@@ -1,7 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { getMovieDetail, moviesSelector } from '@/store/movies';
-import { Col, Descriptions, Rate, Row, Spin, Tag } from 'antd';
-import { StarFilled } from '@ant-design/icons';
+import { Col, Rate, Row, Spin, Tag } from 'antd';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -60,7 +59,9 @@ const MovieDetail = () => {
                 <div className={styles.description}>{movieDetail?.Plot}</div>
                 <div>
                   {movieDetail?.Genre?.split(', ')?.map((genre) => (
-                    <Tag color='blue'>{genre}</Tag>
+                    <Tag key={genre} color='blue'>
+                      {genre}
+                    </Tag>
                   ))}
                 </div>
                 <div className={styles.rate}>

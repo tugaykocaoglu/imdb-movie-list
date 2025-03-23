@@ -5,15 +5,12 @@ import axios from 'axios';
 
 export const getMoviesBySearch = createAsyncThunk(
   ActionTypes.GET_MOVIES,
-  async (
-    data: {
-      s?: string;
-      page?: number;
-      y?: string;
-      type?: 'movie' | 'series' | 'episode' | 'all';
-    },
-    thunkAPI
-  ) => {
+  async (data: {
+    s?: string;
+    page?: number;
+    y?: string;
+    type?: 'movie' | 'series' | 'episode' | 'all';
+  }) => {
     try {
       const response = await axios.get(`http://www.omdbapi.com`, {
         params: {
@@ -33,13 +30,7 @@ export const getMoviesBySearch = createAsyncThunk(
 );
 export const getMovieDetail = createAsyncThunk(
   ActionTypes.GET_MOVIE_DETAIL,
-  async (
-    data: {
-      t?: string;
-      i?: string;
-    },
-    thunkAPI
-  ) => {
+  async (data: { t?: string; i?: string }) => {
     try {
       const response = await axios.get(`http://www.omdbapi.com`, {
         params: {

@@ -1,7 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { getMovieDetail, getMoviesBySearch, setFilter } from './actions';
 import { IMoviesState } from './types';
-import getConfig from 'next/config';
 
 const initialState: IMoviesState = {
   getMoviesPending: false,
@@ -23,7 +22,6 @@ const initialState: IMoviesState = {
 
 export const moviesReducer = createReducer(initialState, (builder) => {
   builder
-    // get-movies
     .addCase(getMoviesBySearch.fulfilled, (state, { payload }) => {
       state.movieSearchResult = payload;
       state.getMoviesPending = false;

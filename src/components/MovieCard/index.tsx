@@ -1,19 +1,14 @@
 'use client';
-
-import { useCallback, useEffect, useState } from 'react';
-
 import styles from './MovieCard.module.scss';
-import axios from 'axios';
+
 import { IMovieSummary } from '@/store/movies';
-import { useRouter } from 'next/router';
+
 import Link from 'next/link';
-import { Rate } from 'antd';
 
 interface MovieCardProps {
   movieSummary: IMovieSummary;
 }
 const MovieCard: React.FC<MovieCardProps> = ({ movieSummary }) => {
-  const router = useRouter();
   return (
     <div className={styles.movieCard}>
       <div className={styles.info}>

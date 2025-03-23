@@ -120,7 +120,7 @@ const MovieList = () => {
           <div className={styles.movieContainer}>
             {Search?.map((movie) => {
               return (
-                <div className={styles.item}>
+                <div key={movie?.imdbID} className={styles.item}>
                   <MovieCard movieSummary={movie} />
                 </div>
               );
