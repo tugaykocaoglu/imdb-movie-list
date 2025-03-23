@@ -1,0 +1,47 @@
+.movieDetail {
+  width: 100%;
+
+  .poster {
+    img {
+      width: 100%;
+    }
+  }
+  .infoList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .subTitle {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .description {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    .poster {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

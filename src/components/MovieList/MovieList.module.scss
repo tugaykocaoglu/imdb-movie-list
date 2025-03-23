@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  .movieContainer {
+    display: grid;
+    /* Her bir item için minimum 300px genişlik, kalan alanı eşit olarak paylaşır */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+
+    .item {
+      max-width: 300px;
+    }
+  }
+
+  .filter {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+}
