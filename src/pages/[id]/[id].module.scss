@@ -3,7 +3,9 @@
 
   .poster {
     img {
+      height: 90vh;
       width: 100%;
+      object-fit: contain;
     }
   }
   .infoList {
@@ -35,12 +37,6 @@
         gap: 12px;
         font-size: 18px;
         font-weight: 600;
-      }
-    }
-
-    .poster {
-      img {
-        width: 100%;
       }
     }
   }

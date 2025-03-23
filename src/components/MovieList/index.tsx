@@ -1,17 +1,14 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-
 import styles from './MovieList.module.scss';
-import axios from 'axios';
+
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { getMoviesBySearch, moviesSelector, setFilter } from '@/store/movies';
-import { Button, Col, Empty, Input, Pagination, Row, Select, Spin } from 'antd';
+import { Button, Empty, Input, Pagination, Select, Spin } from 'antd';
 import MovieCard from '../MovieCard';
+import { useEffect } from 'react';
 
 const MovieList = () => {
-  const [movieList, setMovieList] = useState([]);
-
   const {
     filter,
     movieSearchResult: { Search, totalResults },
@@ -19,6 +16,17 @@ const MovieList = () => {
   } = useAppSelector(moviesSelector);
 
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(
+      getMoviesBySearch({
+        page: 1,
+        s: filter?.searchText,
+        y: filter?.year,
+        type: filter?.type,
+      })
+    );
+  }, []);
 
   return (
     <div className={styles.container}>
