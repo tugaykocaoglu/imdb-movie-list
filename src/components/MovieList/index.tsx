@@ -136,7 +136,7 @@ const MovieList = () => {
             onChange={(page, pageSize) => {
               dispatch(
                 getMoviesBySearch({
-                  page: filter?.page,
+                  page: page,
                   s: filter?.searchText,
                   y: filter?.year,
                   type: filter?.type,
